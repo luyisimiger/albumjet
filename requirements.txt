@@ -1,0 +1,13 @@
+sqlalchemy==1.1.15
+jinja2==2.8
+flask==0.11
+flask_sqlalchemy==2.3.2
+flask_migrate==2.1.1
+flask_script==2.0.6
+
+#werkzeug==0.8.3
+#oauth2client
+#requests
+#httplib2
+#gunicorn==19.4.5
+#whitenoise==3.2

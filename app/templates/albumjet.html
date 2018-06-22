@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/albumjet.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Album Vive la Aventura Colombia</h1>
+                <h2 class="subtitle">Chocolatinas Jet!</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="box">
+                <div class="buttons">
+
+                    {% for r in useralbum.lamina_list %}
+                    <span class="lamina button is-medium {% if r.mark %} is-info {% endif %}" data-mark="{{ r.mark }}" data-id="{{ r.id }}">
+                        {{ format_lamina(r.lamina) }}
+                    </span>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
